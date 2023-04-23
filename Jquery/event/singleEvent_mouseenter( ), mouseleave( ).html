@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>  
+<script src="../jquery.js"></script>
+<script>
+
+	/* 
+		mouseenter, mouseleave 적용한 범위 
+		mouseover, mouseout 해당 요소 
+	*/
+$(function( ) {
+
+	// 해당 요소에서 하나라도 벗어날 시
+	$("#box_1").on("mouseout", function(){
+		$("#box_1").css({"background-color":"yellow"});
+	});
+	
+	// 해당 범위에서 벗어날 시
+	$("#box_2").on("mouseleave", function(){
+		$("#box_2").css({"background-color":"pink"});
+	});
+});
+</script>
+</head>
+<body>
+<h1>mouseout</h1>
+<div id="box_1">
+				<p><a href="#">내용1</a></p>
+				<p><a href="#">내용2</a></p>
+				<p><a href="#">내용3</a></p>
+</div>
+
+<h1>mouseleave</h1>
+<div id="box_2">
+				<p><a href="#">내용4</a></p>
+				<p><a href="#">내용5</a></p>
+				<p><a href="#">내용6</a></p>
+</div>
+</body>
+</html>

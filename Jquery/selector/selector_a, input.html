@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  $(function(){
+    $("#wrap a[target]").css({"color":"red"}); // target 속성을 포함하는 요소 선택
+
+    $("#wrap a[href$=com]").css({"color":"yellow"}); // com으로 끝나는 요소 선택
+
+    $("#wrap a[href*=ddd]").css({"color":"green"}); // ddd가 포함된 요소 선택
+
+    $("#member :text").css({"background-color":"red"}); // input type="text" 요소 선택.
+  })
+</script>
+<body>
+  <div id="wrap">
+    <p>
+      <a href="https://aaa.co.kr" target="_blank">aaa</a>
+    </p>
+    <p>
+      <a href="https://bbb.com">bbb</a>
+    </p>
+    <p>
+      <a href="https://ccc.net">ccc</a>
+    </p>
+
+    <p>
+      <a href="https://ddd.com">ddd</a>
+    </p>
+    <form id="member">
+      <p>
+        <label for="id">ID : </label><input type="text" id="id">
+      </p>
+      <p>
+        <label for="name">NAME : </label><input type="text" id="name">
+      </p>
+      <p>
+        <label for="password">PASSWORD : </label><input type="password" id="password">
+      </p>
+      
+    </form>
+  </div>
+</body>
+</html>

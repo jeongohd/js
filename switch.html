@@ -1,0 +1,19 @@
+<script>
+  let site = prompt("input site name in naver, daum, google", "naver");
+  let url;
+  switch(site){
+    case "naver" : url = "www.naver.com";
+    break;
+    case"daum" : url = "www.daum.net";
+    break;
+    case"google" : url = "www.google.com";
+    break;
+    default : alert("input one from listed site");
+  }
+
+  if(url){
+    location.href = "http://"+ url;
+  }
+
+
+</script>

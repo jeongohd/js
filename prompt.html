@@ -1,0 +1,19 @@
+<script>
+
+
+  
+  function average(arrData){
+    let sum = 0;
+    let avg = 0;
+    for(let i=0; i<arrData.length; i++){
+      sum += Number(prompt("input your "+arrData[i]+" score"),"0");
+    }
+    avg = sum / arrData.length;
+    document.write(avg);
+  }
+  
+  let subjects = ["Math","English","Science"];
+  average(subjects);
+
+
+</script>

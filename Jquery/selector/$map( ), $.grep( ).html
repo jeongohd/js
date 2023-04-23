@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  $(function(){
+    
+    var arr1 = [
+      {"area" : "seoul", "name" : "oh"}
+      ,{"area" : "busan", "name" : "jo"}
+      ,{"area" : "seoul", "name" : "choi"}
+      ,{"area" : "incheon", "name" : "lee"}
+    ]
+
+    // $.map(array, function(a,b){}) - 새 배열 반환. 
+    var arr2 = $.map(arr1, function(value,index){
+      // console.log(a);
+      console.log(index);
+      if(value.area == "seoul" ){
+        return value;
+      }
+    });
+    console.log(arr2);
+
+    // $.grep(array, function(element, index){}) - true이면 새 배열 반환.
+    var arr3 = $.grep(arr1, (element, index) => {
+      if(element.area === "seoul"){
+        return true;
+      } else return false;
+    })
+    console.log(arr3);
+
+
+    // let arr3 = arr1.map(function(e){
+    //   if(e.name === "oh"){
+    //     return e;
+    //   }
+    // })
+    // console.log(arr3);
+
+  })
+</script>
+<body>
+  
+</body>
+</html>

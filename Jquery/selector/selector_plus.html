@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  $(function(){
+    $(".txt + p").css("color","green"); // txt클래스명 바로 다음에오는 p 요소
+    $(".txt").prev().css("border","2px solid red");
+    $(".txt").next().next().css("color","blue");
+    // $(".txt").nextAll().css("color","yellow");
+  })
+</script>
+<body>
+  <div id="wrap">
+    <h1>title 1</h1>
+    <p>content 1</p>
+    <p class="txt">content 2</p>
+    <p>content 3</p>
+    <p>content 4</p>
+  </div> 
+</body>
+</html>

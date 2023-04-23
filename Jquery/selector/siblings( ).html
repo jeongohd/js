@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  $(function(){
+    $(".txt").siblings().css("border","1px solid yellow").css("color","blue");
+  })
+</script>
+<body>
+  <div id="wrap">
+    <h1>title 1</h1>
+    <p>content 1</p>
+    <p class="txt">content 2</p>
+    <p>content 3</p>
+    <p>content 4</p>
+  </div> 
+</body>
+</html>

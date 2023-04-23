@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  $(function(){
+    $("h1").next().css("color","green");
+    console.log($("h2").parent()); // <div id="inner_wrap">
+    $("h2").parent().css("border","2px solid #f00")
+  })
+</script>
+<body>
+  <div id="wrap">
+    <div id="inner_wrap">
+      <h1>title 1</h1>
+      <h2>title 2</h2>
+      <p>content 1</p>
+      <p>content 2</p>
+      <p>content 3</p>
+    </div>
+  </div>
+</body>
+</html>

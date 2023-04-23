@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  $(function(){
+    console.log($(".txt1").closest("div")); // <div id="b">
+    $(".txt1").closest("div").css("border","1px solid red")
+  })
+</script>
+<body>
+  <h1 class="title">Selector</h1>
+  <div id="a">
+    <div id="b">
+      <p class="txt1">content</p>
+    </div>
+  </div>
+</body>
+</html>

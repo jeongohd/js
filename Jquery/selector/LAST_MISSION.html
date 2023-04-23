@@ -1,0 +1,34 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title> 객체 조작 및 생성 </title>
+<script src="../jquery.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(function(){
+	
+	// not메소드 이용해서 첫번째 li요소만 제외시킨 li배경에 노란색 적용.
+
+	$("#txt1").before("<ul id='myList'></ul>");
+	$("#txt1").remove();
+
+	for(let i=1; i<=4; i++){
+		$("<li>내용"+i+"</li>").appendTo("#myList"); // append는 해당 요소 밖에, appendTo는 해당 요소 안에.
+	}
+
+	$("#myList li").not(":first").css("background-color","yellow");
+
+	
+	$("#myList li:eq(2)").text("Changed value");
+
+
+});
+//]]>
+</script>
+</head>
+<body>
+  <p id="txt1">내용1</p>
+</body>
+</html>

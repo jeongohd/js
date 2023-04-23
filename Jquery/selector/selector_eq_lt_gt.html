@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  $(function(){
+    $("#content li:lt(2)").css("color","yellow");
+    $("#content li:gt(2)").css("color","blue");
+    $("#content li:eq(2)").css("color","red");
+  })
+</script>
+<body>
+    <h1>title 1</h1>
+  <ul id="content">
+    <li>content 1</li>
+    <li>content 2</li>
+    <li>content 3</li>
+    <li>content 4</li>
+    <li>content 5</li>
+  </ul>
+</body>
+</html>
